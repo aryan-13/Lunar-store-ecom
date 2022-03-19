@@ -1,0 +1,91 @@
+/* SECTION CART */
+.cart {
+    margin: 3rem;
+}
+.cart-heading {
+    color: var(--color-black);
+    text-decoration: underline;
+    text-decoration-color: var(--color-primary-dark);
+}
+/* WRAPPING CONTAINER FOR CARDS AND PRICE DETAILS */
+.wrapper {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+/* CARD CONTAINER */
+.cart-card-box {
+    background-color: var(--color-white);
+    overflow-y: auto;
+    height: 50rem;
+}
+/* HORIZONTAL CARD CONTAINER */
+.product-card {
+    column-gap: 2rem;
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-grey-dark);
+    margin: 2rem;
+}
+/* PRODUCT IMG */
+.prod-img {
+    width: 20%;
+    height: auto;
+}
+/* PRODUCT CARD BODY -> NAME OF PROD, PRICING, QUANTITY, INC/DEC BTNS */
+.prod-card-body {
+    row-gap: 1rem;
+}
+.inc-dec {
+    display: flex;
+    align-items: center;
+}
+.btn-icon-secondary {
+    border: none;
+    background-color: var(--color-white);
+    padding: 0.5rem;
+    margin: var(--size-1);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+#quantity {
+    font-size: 1.5rem;
+    background-color: var(--color-grey-light-1);
+    padding: 7px 10px;
+    border: 1px solid var(--color-black);
+}
+#close-btn {
+    margin-left: auto;
+}
+/* CONTAINER FOR PRICE DETAILS */
+.cart-total {
+    box-shadow: 0px 0px 6px var(--color-grey-light-2);
+    border: 1px solid var(--color-grey-light-2);
+    width: 35rem;
+    padding: 2.5rem;
+    background-color: var(--color-white);
+    top: 1rem;
+}
+/* PRICE DETAILS BOX*/
+.cart-total-heading {
+    row-gap: 2rem;
+}
+
+.cart-total-items {
+    justify-content: space-between;
+}
+
+/* MEDIA QUERIES */
+@media only screen and (max-width: 680px) {
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .cart-card-box,
+    .cart-total {
+        width: 100%;
+    }
+
+
+}

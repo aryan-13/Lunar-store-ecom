@@ -1,0 +1,17 @@
+.offers-cont {
+    height: 20rem;
+    padding: var(--size-2);
+    margin: var(--size-2) 0;
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    align-items: center;
+}
+
+heading-4 {
+    margin: var(--size-3);
+}
+
+.offer-cta>.btn-primary {
+    color: var(--color-primary-light);
+    background-color: var(--color-white);
+}

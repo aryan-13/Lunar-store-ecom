@@ -1,51 +1,14 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #22201c;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-.brand-title {
-  font-size: 3rem;
-  color: #d9d9d9;
-}
-
-.brand-title span {
-  color: #ffde59;
-}
-
-.brand-description {
-  font-size: 1.4rem;
-}
-
-.links {
-  display: flex;
-}
-
-.links a {
-  color: #d9d9d9;
-  font-size: 1.2rem;
-  margin: 1rem;
-}
+@import url(./css/base/base.css);
+@import url(./css/base/utils.css);
+@import url(./css/layout/home-nav.css);
+@import url(./css/layout/hero.css);
+@import url(./css/layout/catogs.css);
+@import url(./css/layout/filterbar.css);
+@import url(./css/layout/footer.css);
+@import url(./css/layout/offers.css);
+@import url(./css/layout/productlist.css);
+@import url(./css/layout/login.css);
+@import url(./css/layout/horz-cards.css);
+@import url(./css/pages/home.css);
+@import url(./css/pages/productlist.css);
+@import url(./css/pages/login-page.css);
