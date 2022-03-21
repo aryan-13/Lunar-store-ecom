@@ -11,7 +11,7 @@ function App() {
       <HeroSlider/>
       <Offers/>
       <Catog/>
-      <Footer/>
+      <Footer/> 
     </div>
   );
 }
