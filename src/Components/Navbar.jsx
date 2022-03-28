@@ -1,20 +1,21 @@
+import {Link} from "react-router-dom"
 const Navbar = () => {
     return (
         <nav className="home-nav">
       <div className="navigation-box">
-        <a href="./index.html">
+        <Link to="/">
           <div className="logo-box"><span className="logo-primary">Lunar</span> <span
               className="color-primary logo-secondary">Store</span></div>
-        </a>
+        </Link>
 
         <div className="menu-box">
           <ul className="menu-list no-bullets ">
             <li className="menu-item bold-1">
-              <a href="./index.html"> Home</a>
+              <Link to="/"> Home</Link>
 
             </li>
             <li className="menu-item bold-1">
-              <a href="./product-listing.html"> Shop</a>
+              <Link to="/products"> Shop</Link>
 
             </li>
           </ul>
