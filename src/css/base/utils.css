@@ -1,0 +1,17 @@
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.color-primary {
+    color: var(--color-primary);
+}
+
+.centered {
+    text-align: center;
+}

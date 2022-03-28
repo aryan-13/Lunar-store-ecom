@@ -1,0 +1,52 @@
+.home-catog {
+  align-items: center;
+  padding: var(--size-1) 0 0 0;
+}
+
+.catog-box {
+  position: relative;
+}
+
+.catog-box>img {
+  height: 25rem;
+}
+
+.catog-box>img:hover {
+  cursor: pointer;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: var(--color-grey-light-2);
+}
+
+.catog-cont {
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.catog-box:hover .overlay {
+  opacity: .85;
+  cursor: pointer;
+  color: var(--color-black);
+}

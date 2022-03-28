@@ -1,0 +1,17 @@
+.footer {
+	background-color: var(--color-black);
+	grid-area: footer;
+	color: var(--color-white);
+	padding: 1rem;
+	font-size: var(--size-2);
+	align-items: center;
+}
+
+.footer div {
+	padding: 0.7rem;
+}
+
+.footer__items-icons {
+	padding: 0 0.8rem;
+	cursor: pointer;
+}
