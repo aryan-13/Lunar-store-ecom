@@ -1,17 +1,13 @@
 import "./App.css";
-import  Footer  from "./Components/Footer";
-import Navbar from "./Components/Navbar";
-import HeroSlider from "./Components/HeroSlider";
-import Offers from "./Components/Offers";
-import Catog from "./Components/Catog";
+
+import {Routes, Route} from 'react-router-dom';
+import HomePage from "./pages/HomePage";
 function App() {
   return (
     <div className="App home-container flex-col">
-      <Navbar/>
-      <HeroSlider/>
-      <Offers/>
-      <Catog/>
-      <Footer/> 
+      <Routes>  
+        <Route path="/" element={<HomePage />} />
+      </Routes>
     </div>
   );
 }

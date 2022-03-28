@@ -11,6 +11,7 @@
 .color-primary {
     color: var(--color-primary);
 }
-.centered{
+
+.centered {
     text-align: center;
 }

@@ -5,7 +5,7 @@ import Offers from "../Components/Offers"
 import Catog from "../Components/Catog"
 const HomePage = () => {
     return (
-        <><Navbar /><HeroSlider /><Offers /><Catog /><Footer /></>
+        <div><Navbar /><HeroSlider /><Offers /><Catog /><Footer /></div>
     ) 
 }
 export default HomePage;
