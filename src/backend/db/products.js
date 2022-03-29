@@ -23,7 +23,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Untamed Faded Effect Oversized T-Shirt",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2022/01/24122640/Bonkerscorner_Untamed_leopard_faded_oversized_tshirt_02-1200x1800.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -35,7 +35,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Motordrip Faded Effect Oversized T-shirt",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2022/01/23160759/Bonkerscorner_Motordrip_oversized_tshirt_55-1200x1800.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -47,7 +47,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Signature Baller Oversized Jersey Set",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2022/01/23110952/Bonkerscorner_signature_baller_oversized_jersey_set_36-1200x1800.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -60,7 +60,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Jade Joggers",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2021/08/07090219/Bonkerscorner_Jade_jogger%E2%80%99s0721-1200x1800.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -72,7 +72,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Little Snitch Black Joggers",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2021/08/17140232/SAYA0410-1200x1800.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -84,7 +84,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Maroon Utility Straight Fit Pants",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2022/01/11120251/Bonkerscorner_maroon_utility_pants_179-1200x1800.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -96,7 +96,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Black Utility Straight Fit Pant",
-    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
+    image: "https://assets.bonkerscorner.com/uploads/2021/04/06121639/Bonkerscorner_-Blackpant_4-1200x1800.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
