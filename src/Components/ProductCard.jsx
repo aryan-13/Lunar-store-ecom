@@ -5,7 +5,7 @@ function ProductCard({product}) {
     <div>
                 <div className="vertical-card">
           <div className="card-img">
-            <img src={product.img} alt="" />
+            <img src={product.image} alt="" />
           </div>
           <div className="card-text">
             <h3 className="card-title">{product.name}</h3>
