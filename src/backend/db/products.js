@@ -11,7 +11,7 @@ export const products = [{
     // TSHIRTS
     _id: uuid(),
     name: "Nob Head Oversized T-Shirt",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -23,7 +23,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Untamed Faded Effect Oversized T-Shirt",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -35,7 +35,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Motordrip Faded Effect Oversized T-shirt",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -47,7 +47,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Signature Baller Oversized Jersey Set",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "tshirt",
     discountPercentage: "30%",
@@ -60,7 +60,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Jade Joggers",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -72,7 +72,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Little Snitch Black Joggers",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -84,7 +84,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Maroon Utility Straight Fit Pants",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -96,7 +96,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Black Utility Straight Fit Pant",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "bottoms",
     discountPercentage: "30%",
@@ -109,7 +109,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Matcha Oversized Zipper",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "jacket",
     discountPercentage: "30%",
@@ -121,7 +121,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Brown Oversized Zipper",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "jacket",
     discountPercentage: "30%",
@@ -133,7 +133,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Black Oversized Zipper",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "jacket",
     discountPercentage: "30%",
@@ -145,7 +145,7 @@ export const products = [{
   {
     _id: uuid(),
     name: "Black Oversized Shacket",
-    image: "",
+    image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
     price: 999,
     category: "jacket",
     discountPercentage: "30%",
@@ -158,7 +158,7 @@ export const products = [{
     {
       _id: uuid(),
       name: "Green Plaid Flannel Oversized Shirt",
-      image: "",
+      image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
       price: 999,
       category: "shirt",
       discountPercentage: "30%",
@@ -171,7 +171,7 @@ export const products = [{
     {
       _id: uuid(),
       name: "Beige Plaid Flannel Oversized Shirt",
-      image: "",
+      image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
       price: 999,
       category: "shirt",
       discountPercentage: "30%",
@@ -184,7 +184,7 @@ export const products = [{
     {
       _id: uuid(),
       name: "Black & White Checkered Plaid Oversized Shirt",
-      image: "",
+      image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
       price: 999,
       category: "shirt",
       discountPercentage: "30%",
@@ -197,7 +197,7 @@ export const products = [{
     {
       _id: uuid(),
       name: "Dark Navy Blue Checkered Plaid Oversized Shirt",
-      image: "",
+      image: "https://assets.bonkerscorner.com/uploads/2021/12/25155136/Bonkerscorner_jaded_love_co-ord_set_63-1024x1536.jpg",
       price: 999,
       category: "shirt",
       discountPercentage: "30%",
