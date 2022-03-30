@@ -9,25 +9,26 @@ export const categories = [
   {
     _id: uuid(),
     categoryName: "Shirts",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    image: "https://res.cloudinary.com/difqzsduz/image/upload/v1647713860/Lunar%20store/shirts_rbqvvb.png"
+
   },
   {
     _id: uuid(),
     categoryName: "Bottoms",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    image: "https://res.cloudinary.com/difqzsduz/image/upload/v1647713859/Lunar%20store/bottoms_wyvjx6.png"
+
   },
   {
     _id: uuid(),
     categoryName: "Tshirts",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    image: "https://res.cloudinary.com/difqzsduz/image/upload/v1647713861/Lunar%20store/tee_uvwq1g.png"
+
+    
   },
   {
     _id: uuid(),
     categoryName: "Jackets",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    image: "https://res.cloudinary.com/difqzsduz/image/upload/v1647713860/Lunar%20store/outerwear_sdxg4u.png"
+    
   },
 ];
