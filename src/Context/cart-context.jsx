@@ -6,18 +6,9 @@ const cart = {
 	cartProducts: [],
 	price: 0,
 	totalDiscount: 0,
-	totalPrice: 0,
 };
 const CartProvider = ({ children }) => {
-	const calculateCartPrice = () => {
-		let totalPrice = 0;
-		for (let i = 0; i < cart.cartProducts.length; i++) {
-			totalPrice +=
-				cart.cartProducts[i].price * cart.cartProducts[i].inCartQuantity;
-			console.log(totalPrice);
-		}
-		return totalPrice;
-	};
+	
 	const addtocart = (state, product) => {
 		console.log(state.cartProducts, product);
 
@@ -27,7 +18,8 @@ const CartProvider = ({ children }) => {
 		};
 		return {
 			...state,
-			price: calculateCartPrice(),
+			price: state.price + product.price,
+			totalDiscount: state.totalDiscount + (product.price - product.discountPrice),
 			cartProducts: [...state.cartProducts, updatedProduct],
 		};
 	};
@@ -37,7 +29,8 @@ const CartProvider = ({ children }) => {
 		);
 		return {
 			...state,
-			price: calculateCartPrice(),
+			price: state.price-product.price,
+			totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
 			cartProducts: updatedCart,
 		};
 	};
@@ -46,7 +39,6 @@ const CartProvider = ({ children }) => {
 			if (item.id === product.id) {
 				return {
 					...item,
-					price: calculateCartPrice(),
 					inCartQuantity: item.inCartQuantity + 1,
 				};
 			}
@@ -54,7 +46,9 @@ const CartProvider = ({ children }) => {
 		});
 		return {
 			...state,
-			price: calculateCartPrice(),
+			price: product.price+state.price,
+			totalDiscount: state.totalDiscount + (product.price - product.discountPrice),
+
 			cartProducts: updatedProduct,
 		};
 	};
@@ -65,7 +59,9 @@ const CartProvider = ({ children }) => {
 			);
 			return {
 				...state,
-				price: calculateCartPrice(),
+				price: state.price - product.price,
+				totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
+
 				cartProducts: updatedCart,
 			};
 		} else {
@@ -78,7 +74,8 @@ const CartProvider = ({ children }) => {
 			console.log('DECREASING Q:', product.inCartQuantity);
 			return {
 				...state,
-				price: calculateCartPrice(),
+				price: state.price - product.price,
+				totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
 				cartProducts: updatedProduct,
 			};
 		}

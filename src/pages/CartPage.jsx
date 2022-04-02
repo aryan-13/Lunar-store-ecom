@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import CartCard from '../Components/CartCard';
 import { useCart } from '../Context/cart-context';
+import CartPriceCard from '../Components/CartPriceCard';
 function CartPage() {
 	const { state, dispatch } = useCart();
 	const cartProds = state.cartProducts;
@@ -28,31 +29,7 @@ function CartPage() {
 					</div>
 					<div className="u-margin-bottom-medium"></div>
 					{/* <!-- ----PRICE DETAILS --> */}
-					<div className="flex-col cart-total ">
-						<div className="flex-col cart-total-heading">
-							<h1 className="heading-5">Price Details</h1>
-
-							<div className="flex-row cart-total-items ">
-								<p className="p-sm">Total Price:</p>
-								<span className="p-sm">{state.price}</span>
-							</div>
-							<div className="flex-row cart-total-items">
-								<p className="p-sm">Discount:</p>
-								<span className="p-sm">$4</span>
-							</div>
-							<div className="flex-row cart-total-items">
-								<p className="p-sm">Delivery Charges:</p>
-								<span className="p-sm">$2</span>
-							</div>
-							<div className="flex-row cart-total-items">
-								<p className="p-md bold-1">Total Price:</p>
-								<span className="color-primary p-md bold-1">$18</span>
-							</div>
-							<a href="" className="btn btn-sm btn-primary">
-								Place Order{' '}
-							</a>
-						</div>
-					</div>
+						<CartPriceCard/>
 					{/* <!-- ------------------ --> */}
 				</div>
 			</section>
