@@ -6,7 +6,7 @@ import ProductListing from './pages/ProductListing';
 import CartPage from './pages/CartPage';
 function App() {
 	return (
-		<div className="App home-container flex-col">
+		<div className="App">
 			<Routes>
 				<Route path="/" element={<HomePage />} />
 				<Route path="/products" element={<ProductListing />} />

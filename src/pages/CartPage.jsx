@@ -9,8 +9,9 @@ function CartPage() {
 	const cartProds = state.cartProducts;
 
 	return (
-		<div>
+		<div class="home-container flex-col">
 			<Navbar />
+
 			<section className="cart">
 				{/* <!-- HEADING --> */}
 				<h3 className="cart-heading heading-4 bold-2 centered">
@@ -22,18 +23,15 @@ function CartPage() {
 				<div className="u-margin-bottom-small"></div>
 				{/* <!-- WRAPPING CONTAINER FOR CARD AND PRICE DETAILS --> */}
 				<div className="flex-row wrapper">
-					<div className="flex-col cart-card-box">
+					<div class="flex-col cart-card-box">
 						{cartProds.map((prod) => {
 							return <CartCard CartProduct={prod} key={prod.id} />;
 						})}
 					</div>
-
 					<div className="u-margin-bottom-medium"></div>
-					<div class="flex-col cart-total ">
-						{/* <!-- ----PRICE DETAILS --> */}
-						<CartPriceCard />
-						{/* <!-- ------------------ --> */}
-					</div>
+					{/* <!-- ----PRICE DETAILS --> */}
+					<CartPriceCard />
+					{/* <!-- ------------------ --> */}
 				</div>
 			</section>
 			<Footer />
