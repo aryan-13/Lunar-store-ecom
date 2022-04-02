@@ -27,10 +27,13 @@ function CartPage() {
 							return <CartCard CartProduct={prod} key={prod.id} />;
 						})}
 					</div>
+
 					<div className="u-margin-bottom-medium"></div>
-					{/* <!-- ----PRICE DETAILS --> */}
-						<CartPriceCard/>
-					{/* <!-- ------------------ --> */}
+					<div class="flex-col cart-total ">
+						{/* <!-- ----PRICE DETAILS --> */}
+						<CartPriceCard />
+						{/* <!-- ------------------ --> */}
+					</div>
 				</div>
 			</section>
 			<Footer />
