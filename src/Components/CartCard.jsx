@@ -5,7 +5,7 @@ function CartCard({ CartProduct }) {
 	return (
 		<div className=" flex-row product-card ">
 			<div className="prod-img">
-				<img src={CartProduct.image} alt="" className="responsive-img" />
+				<img src={CartProduct.image} alt="Product" className="responsive-img" />
 			</div>
 			<div className="prod-card-body flex-col">
 				<h5 className="heading-5 bold-2">{CartProduct.name}</h5>
@@ -32,9 +32,7 @@ function CartCard({ CartProduct }) {
 						<i className="fa fa-plus"></i>
 					</button>
 				</div>
-				<button  className="btn btn-sm btn-primary">
-					Move to Wishlist{' '}
-				</button>
+				<button className="btn btn-sm btn-primary">Move to Wishlist </button>
 			</div>
 
 			<button

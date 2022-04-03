@@ -18,9 +18,11 @@ function CartPage() {
 					{' '}
 					CART <i className="color-primary-dark fa fa-shopping-cart"></i>{' '}
 				</h3>
+
 				{/* <!-- MARGINS --> */}
 				<div className="u-margin-bottom-medium"></div>
 				<div className="u-margin-bottom-small"></div>
+
 				{/* <!-- WRAPPING CONTAINER FOR CARD AND PRICE DETAILS --> */}
 				<div className="flex-row wrapper">
 					<div class="flex-col cart-card-box">
@@ -31,7 +33,6 @@ function CartPage() {
 					<div className="u-margin-bottom-medium"></div>
 					{/* <!-- ----PRICE DETAILS --> */}
 					<CartPriceCard />
-					{/* <!-- ------------------ --> */}
 				</div>
 			</section>
 			<Footer />
