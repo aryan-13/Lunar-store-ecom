@@ -47,9 +47,9 @@ function ProductCard({ product }) {
 						)}
 						<i className="fa fa-shopping-cart btn-box-icon btn-sm"></i>
 					</div>
-					<a href="" className="btn btn-tertiary-icon card-btn-icon">
+					<Link to className="btn btn-tertiary-icon card-btn-icon">
 						<i className="fas fa-heart"></i>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

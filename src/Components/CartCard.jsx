@@ -32,7 +32,7 @@ function CartCard({ CartProduct }) {
 						<i className="fa fa-plus"></i>
 					</button>
 				</div>
-				<a href="" className="btn btn-sm btn-primary">
+				<a href="./cart.html" className="btn btn-sm btn-primary">
 					Move to Wishlist{' '}
 				</a>
 			</div>
