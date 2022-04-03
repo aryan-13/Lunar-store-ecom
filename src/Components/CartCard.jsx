@@ -38,6 +38,7 @@ function CartCard({ CartProduct }) {
 			</div>
 
 			<a
+			href="/#"
 				className="btn btn-tertiary-icon"
 				id="close-btn"
 				onClick={() =>

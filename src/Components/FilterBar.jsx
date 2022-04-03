@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 function FilterBar() {
-	const [catogData, setCatogData] = useState([]);
-	const getCatog = async () => {
-		const catog = await axios.get('/api/categories');
-		try {
-			console.log(catog.data.categories);
-			setCatogData(catog.data.categories);
-		} catch (err) {
-			console.log('error');
-		}
-	};
-	useEffect(() => {
-		getCatog();
-	}, []);
+	// const [catogData, setCatogData] = useState([]);
+	// const getCatog = async () => {
+	// 	const catog = await axios.get('/api/categories');
+	// 	try {
+	// 		console.log(catog.data.categories);
+	// 		setCatogData(catog.data.categories);
+	// 	} catch (err) {
+	// 		console.log('error');
+	// 	}
+	// };
+	// useEffect(() => {
+	// 	getCatog();
+	// }, []);
 	return (
 		<div className="filter-bar">
 			<div className="flex-row filter-header">

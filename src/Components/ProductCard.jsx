@@ -29,6 +29,7 @@ function ProductCard({ product }) {
 					<div className="button-box">
 						{checkInCart() ? (
 							<a
+							href="/#"
 								onClick={() => {
 									dispatch({ type: 'ADD_TO_CART', payload: product });
 									console.log(product.inCartQuantity);
@@ -39,6 +40,7 @@ function ProductCard({ product }) {
 							</a>
 						) : (
 							<a
+							href="/#"
 								onClick={() => {
 									console.log('Go TO CART');
 								}}

@@ -25,7 +25,7 @@ function CartPriceCard() {
 						${state.price - state.totalDiscount}
 					</span>
 				</div>
-				<a className="btn btn-sm btn-primary">Place Order </a>
+				<a href="/#" className="btn btn-sm btn-primary">Place Order </a>
 			</div>
 		</div>
 	);
