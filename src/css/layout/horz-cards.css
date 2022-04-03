@@ -21,7 +21,7 @@
 	background-color: var(--color-white);
 	overflow-y: auto;
 	height: 50rem;
-	width: 60rem;
+	/* width: 60rem; */
 }
 
 /* HORIZONTAL CARD CONTAINER */
