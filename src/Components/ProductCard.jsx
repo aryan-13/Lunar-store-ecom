@@ -1,5 +1,7 @@
 import React from 'react';
 import { useCart } from '../Context/cart-context';
+import { Link } from 'react-router-dom';
+
 function ProductCard({ product }) {
 	const { state, dispatch } = useCart();
 	const checkInCart = () => {
