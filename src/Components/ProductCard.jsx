@@ -1,6 +1,5 @@
 import React from 'react';
 import { useCart } from '../Context/cart-context';
-import { Link } from 'react-router-dom';
 
 function ProductCard({ product }) {
 	const { state, dispatch } = useCart();
@@ -28,8 +27,7 @@ function ProductCard({ product }) {
 				<div className="card-btn">
 					<div className="button-box">
 						{checkInCart() ? (
-							<a
-							href="/#"
+							<button
 								onClick={() => {
 									dispatch({ type: 'ADD_TO_CART', payload: product });
 									console.log(product.inCartQuantity);
@@ -37,23 +35,22 @@ function ProductCard({ product }) {
 								className="btn btn-primary btn-sm"
 							>
 								ADD TO CART
-							</a>
+							</button>
 						) : (
-							<a
-							href="/#"
+							<button
 								onClick={() => {
 									console.log('Go TO CART');
 								}}
 								className="btn btn-primary btn-sm"
 							>
 								GO TO CART
-							</a>
+							</button>
 						)}
 						<i className="fa fa-shopping-cart btn-box-icon btn-sm"></i>
 					</div>
-					<Link to className="btn btn-tertiary-icon card-btn-icon">
+					<button className="btn btn-tertiary-icon card-btn-icon">
 						<i className="fas fa-heart"></i>
-					</Link>
+					</button>
 				</div>
 			</div>
 		</div>

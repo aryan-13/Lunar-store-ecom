@@ -111,7 +111,10 @@ h5,
 h6 {
 	overflow-wrap: break-word;
 }
+button{
+background-color: inherit;
 
+}
 /* width */
 ::-webkit-scrollbar {
 	width: 5px;

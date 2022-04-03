@@ -32,13 +32,12 @@ function CartCard({ CartProduct }) {
 						<i className="fa fa-plus"></i>
 					</button>
 				</div>
-				<a href="./cart.html" className="btn btn-sm btn-primary">
+				<button  className="btn btn-sm btn-primary">
 					Move to Wishlist{' '}
-				</a>
+				</button>
 			</div>
 
-			<a
-			href="/#"
+			<button
 				className="btn btn-tertiary-icon"
 				id="close-btn"
 				onClick={() =>
@@ -46,7 +45,7 @@ function CartCard({ CartProduct }) {
 				}
 			>
 				<i className="fas fa-times"></i>
-			</a>
+			</button>
 		</div>
 	);
 }
