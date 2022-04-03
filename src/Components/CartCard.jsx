@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCart } from '../Context/cart-context';
 function CartCard({ CartProduct }) {
-	const { state, dispatch } = useCart();
+	const { dispatch } = useCart();
 	return (
 		<div className=" flex-row product-card ">
 			<div className="prod-img">

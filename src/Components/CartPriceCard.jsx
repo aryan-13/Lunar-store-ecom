@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCart } from '../Context/cart-context';
 function CartPriceCard() {
-	const { state, dispatch } = useCart();
+	const { state } = useCart();
 	return (
 		<div className="flex-col cart-total ">
 			<div className="flex-col cart-total-heading">
