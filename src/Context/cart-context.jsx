@@ -6,9 +6,9 @@ const cart = {
 	cartProducts: [],
 	price: 0,
 	totalDiscount: 0,
+	wishlistProduct: [],
 };
 const CartProvider = ({ children }) => {
-	
 	const addtocart = (state, product) => {
 		console.log(state.cartProducts, product);
 
@@ -19,7 +19,8 @@ const CartProvider = ({ children }) => {
 		return {
 			...state,
 			price: state.price + product.price,
-			totalDiscount: state.totalDiscount + (product.price - product.discountPrice),
+			totalDiscount:
+				state.totalDiscount + (product.price - product.discountPrice),
 			cartProducts: [...state.cartProducts, updatedProduct],
 		};
 	};
@@ -29,8 +30,9 @@ const CartProvider = ({ children }) => {
 		);
 		return {
 			...state,
-			price: state.price-product.price,
-			totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
+			price: state.price - product.price,
+			totalDiscount:
+				state.totalDiscount - (product.price - product.discountPrice),
 			cartProducts: updatedCart,
 		};
 	};
@@ -46,8 +48,9 @@ const CartProvider = ({ children }) => {
 		});
 		return {
 			...state,
-			price: product.price+state.price,
-			totalDiscount: state.totalDiscount + (product.price - product.discountPrice),
+			price: product.price + state.price,
+			totalDiscount:
+				state.totalDiscount + (product.price - product.discountPrice),
 
 			cartProducts: updatedProduct,
 		};
@@ -60,7 +63,8 @@ const CartProvider = ({ children }) => {
 			return {
 				...state,
 				price: state.price - product.price,
-				totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
+				totalDiscount:
+					state.totalDiscount - (product.price - product.discountPrice),
 
 				cartProducts: updatedCart,
 			};
@@ -75,11 +79,13 @@ const CartProvider = ({ children }) => {
 			return {
 				...state,
 				price: state.price - product.price,
-				totalDiscount: state.totalDiscount - (product.price - product.discountPrice),
+				totalDiscount:
+					state.totalDiscount - (product.price - product.discountPrice),
 				cartProducts: updatedProduct,
 			};
 		}
 	};
+	const addToWishlist = (state, product) => {};
 	const reducer = (state, action) => {
 		switch (action.type) {
 			case 'ADD_TO_CART':
@@ -90,6 +96,8 @@ const CartProvider = ({ children }) => {
 				return decreaseQuantity(state, action.payload);
 			case 'REMOVE_FROM_CART':
 				return removeFromCart(state, action.payload);
+			case 'ADD_TO_WISHLIST':
+				return addToWishlist(state, action.payload);
 			default:
 				return state;
 		}
