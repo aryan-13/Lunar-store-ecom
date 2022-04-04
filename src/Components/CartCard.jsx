@@ -1,7 +1,9 @@
 import React from 'react';
 import { useCart } from '../Context/cart-context';
+import { useWishlist } from '../Context/wishlist-context';
 function CartCard({ CartProduct }) {
 	const { dispatch } = useCart();
+	const { wishlistDispatch } = useWishlist();
 	return (
 		<div className=" flex-row product-card ">
 			<div className="prod-img">
@@ -32,7 +34,12 @@ function CartCard({ CartProduct }) {
 						<i className="fa fa-plus"></i>
 					</button>
 				</div>
-				<button  className="btn btn-sm btn-primary">
+				<button
+					onClick={() =>
+						wishlistDispatch({ type: 'ADD_TO_WISHLIST', payload: CartProduct })
+					}
+					className="btn btn-sm btn-primary"
+				>
 					Move to Wishlist{' '}
 				</button>
 			</div>
