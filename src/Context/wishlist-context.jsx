@@ -1,5 +1,4 @@
 import { useContext, createContext, useReducer } from 'react';
-// import { useCart } from '../Context/cart-context';
 const wishlistContext = createContext();
 
 const wishlistProducts = [];
@@ -12,11 +11,7 @@ function WishlistProvider({ children }) {
 	const removeFromWishlist = (state, product) => {
 		return state.filter((item) => item.id !== product.id);
 	};
-	// const moveToWishlist = (state, product) => {
-	// 	const updatedCart = state.filter((item) => item.id !== product.id);
 
-	// 	return [...state, product];
-	// };
 	const wishlistReducer = (state, action) => {
 		switch (action.type) {
 			case 'ADD_TO_WISHLIST':

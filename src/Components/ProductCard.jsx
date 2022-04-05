@@ -7,12 +7,9 @@ function ProductCard({ product, page }) {
 	const { state, dispatch } = useCart();
 	const { wishlistDispatch } = useWishlist();
 	const checkInCart = () => {
-		for (let i = 0; i < state.cartProducts.length; i++) {
-			if (state.cartProducts[i].id === product.id) {
-				return false;
-			}
-		}
-		return true;
+		if (state.cartProducts.some((item) => item.id === product.id)) {
+			return false;
+		} else return true;
 	};
 	return (
 		<div>
