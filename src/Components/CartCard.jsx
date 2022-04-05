@@ -35,9 +35,10 @@ function CartCard({ CartProduct }) {
 					</button>
 				</div>
 				<button
-					onClick={() =>
-						wishlistDispatch({ type: 'ADD_TO_WISHLIST', payload: CartProduct })
-					}
+					onClick={() => {
+						dispatch({ type: 'REMOVE_FROM_CART', payload: CartProduct });
+						wishlistDispatch({ type: 'ADD_TO_WISHLIST', payload: CartProduct });
+					}}
 					className="btn btn-sm btn-primary"
 				>
 					Move to Wishlist{' '}
