@@ -1,15 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../Context/cart-context';
+import { useWishlist } from '../Context/wishlist-context';
 
-function ProductCard({ product }) {
+function ProductCard({ product, page }) {
 	const { state, dispatch } = useCart();
+	const { wishlistDispatch } = useWishlist();
 	const checkInCart = () => {
-		for (let i = 0; i < state.cartProducts.length; i++) {
-			if (state.cartProducts[i].id === product.id) {
-				return false;
-			}
-		}
-		return true;
+		if (state.cartProducts.some((item) => item.id === product.id)) {
+			return false;
+		} else return true;
 	};
 	return (
 		<div>
@@ -37,20 +37,34 @@ function ProductCard({ product }) {
 								ADD TO CART
 							</button>
 						) : (
-							<button
-								onClick={() => {
-									console.log('Go TO CART');
-								}}
-								className="btn btn-primary btn-sm"
-							>
+							<Link to="/cart" className="btn btn-primary btn-sm">
 								GO TO CART
-							</button>
+							</Link>
 						)}
 						<i className="fa fa-shopping-cart btn-box-icon btn-sm"></i>
 					</div>
-					<button className="btn btn-tertiary-icon card-btn-icon">
-						<i className="fas fa-heart"></i>
-					</button>
+					{page === 'productListing' ? (
+						<button
+							className="btn btn-tertiary-icon card-btn-icon"
+							onClick={() =>
+								wishlistDispatch({ type: 'ADD_TO_WISHLIST', payload: product })
+							}
+						>
+							<i className="fas fa-heart"></i>
+						</button>
+					) : (
+						<button
+							className="btn btn-tertiary-icon card-btn-icon"
+							onClick={() =>
+								wishlistDispatch({
+									type: 'REMOVE_FROM_WISHLIST',
+									payload: product,
+								})
+							}
+						>
+							<i className="fas fa-trash"></i>
+						</button>
+					)}
 				</div>
 			</div>
 		</div>

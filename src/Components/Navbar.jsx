@@ -39,10 +39,10 @@ const Navbar = () => {
 							</a>
 						</li>
 						<li className="nav-child">
-							<a href="/#" className="btn btn-tertiary-icon">
+							<Link to="/wishlist" className="btn btn-tertiary-icon">
 								{' '}
 								<i className="fas fa-heart"></i>
-							</a>
+							</Link>
 						</li>
 						<li className="nav-child">
 							<Link to="/cart" className="btn btn-tertiary-icon">
