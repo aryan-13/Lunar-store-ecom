@@ -1,23 +1,32 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
+import { useFilter } from '../Context/filter-context';
+import axios from 'axios';
 function FilterBar() {
-	// const [catogData, setCatogData] = useState([]);
-	// const getCatog = async () => {
-	// 	const catog = await axios.get('/api/categories');
-	// 	try {
-	// 		console.log(catog.data.categories);
-	// 		setCatogData(catog.data.categories);
-	// 	} catch (err) {
-	// 		console.log('error');
-	// 	}
-	// };
-	// useEffect(() => {
-	// 	getCatog();
-	// }, []);
+	const { filter, filterDispatch } = useFilter();
+	const [categories, setCategories] = useState();
+	const getCategory = async () => {
+		const categories = await axios.get('/api/categories');
+
+		try {
+			console.log('catogs: ', categories.data.categories);
+			setCategories(categories.data.categories);
+		} catch (err) {
+			console.log(err);
+		}
+	};
+	useEffect(() => {
+		getCategory();
+	}, []);
 	return (
 		<div className="filter-bar">
 			<div className="flex-row filter-header">
 				<h4 className="heading-5 bold-2">Filters</h4>
-				<button className="btn-2 btn-underlined">Clear all</button>
+				<button
+					className="btn-2 btn-underlined"
+					onClick={() => filterDispatch({ type: 'CLEAR_ALL' })}
+				>
+					Clear all
+				</button>
 			</div>
 			<hr />
 			<div className="u-margin-bottom-small"></div>
@@ -28,13 +37,27 @@ function FilterBar() {
 				<div className="u-margin-bottom-small"></div>
 
 				<label className="radio-list">
-					One
-					<input type="radio" checked="checked" name="radio" />
+					Low to High
+					<input
+						type="radio"
+						checked={filter.sortBy === 'LOW_TO_HIGH'}
+						onChange={() =>
+							filterDispatch({ type: 'SET_SORT_BY', payload: 'LOW_TO_HIGH' })
+						}
+						name="radio"
+					/>
 					<span className="radio"></span>
 				</label>
 				<label className="radio-list">
-					Two
-					<input type="radio" name="radio" />
+					High to Low
+					<input
+						type="radio"
+						name="radio"
+						checked={filter.sortBy === 'HIGH_TO_LOW'}
+						onChange={() =>
+							filterDispatch({ type: 'SET_SORT_BY', payload: 'HIGH_TO_LOW' })
+						}
+					/>
 					<span className="radio"></span>
 				</label>
 			</div>
@@ -45,27 +68,25 @@ function FilterBar() {
 				<p className="p-md">Category</p>
 				<div className="u-margin-bottom-small"></div>
 				<div className="u-margin-bottom-small"></div>
-				{}
-				<label className="check-list">
-					Jeans
-					<input type="checkbox" checked="checked" />
-					<span className="checkmark"></span>
-				</label>
-				<label className="check-list">
-					Tshirts
-					<input type="checkbox" />
-					<span className="checkmark"></span>
-				</label>
-				<label className="check-list">
-					Shirts
-					<input type="checkbox" />
-					<span className="checkmark"></span>
-				</label>
-				<label className="check-list">
-					Jackets
-					<input type="checkbox" />
-					<span className="checkmark"></span>
-				</label>
+				{categories &&
+					categories.map((category) => {
+						return (
+							<label className="check-list">
+								{category.categoryName}
+								<input
+									type="checkbox"
+									onChange={() =>
+										filterDispatch({
+											type: 'CATEGORY_CHECKED',
+											payload: category.categoryName,
+										})
+									}
+									checked={filter.categories.includes(category.categoryName)}
+								/>
+								<span className="checkmark"></span>
+							</label>
+						);
+					})}
 			</div>
 			<hr />
 			<div className="u-margin-bottom-small"></div>
@@ -76,21 +97,25 @@ function FilterBar() {
 				<div className="u-margin-bottom-small"></div>
 
 				<div className="slider-container">
+					<div className="flex-row">
+						<p className="slider-btn">1</p>
+						<p className="slider-btn">2</p>
+						<p className="slider-btn">3</p>
+						<p className="slider-btn">4</p>
+						<p className="slider-btn">5</p>
+					</div>
+
 					<input
 						type="range"
 						list="tickmarks"
-						min="10"
-						max="50"
-						step="10"
+						onChange={(e) =>
+							filterDispatch({ type: 'RATING', payload: e.target.value })
+						}
+						min="1"
+						max="5"
+						step="1"
 						className="slider"
 					/>
-					<datalist id="tickmarks">
-						<option value="10"></option>
-						<option value="20"></option>
-						<option value="30"></option>
-						<option value="40"></option>
-						<option value="50"></option>
-					</datalist>
 				</div>
 			</div>
 		</div>
