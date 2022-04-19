@@ -33,10 +33,10 @@ const Navbar = () => {
 				<div className="nav-list">
 					<ul className="no-bullets nav-ul">
 						<li className="nav-child">
-							<a href="/#" className="btn btn-tertiary-icon">
+							<Link to="/login" className="btn btn-tertiary-icon">
 								{' '}
 								<i className="fas fa-user"></i>
-							</a>
+							</Link>
 						</li>
 						<li className="nav-child">
 							<Link to="/wishlist" className="btn btn-tertiary-icon">
