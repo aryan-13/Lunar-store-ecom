@@ -1,12 +1,14 @@
 import './App.css';
 
 import { Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import ProductListing from './pages/ProductListing';
-import CartPage from './pages/CartPage';
-import WishlistPage from './pages/WishlistPage';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
+import {
+	CartPage,
+	HomePage,
+	Login,
+	Signup,
+	WishlistPage,
+	ProductListing,
+} from '../src/pages';
 function App() {
 	return (
 		<div className="App">

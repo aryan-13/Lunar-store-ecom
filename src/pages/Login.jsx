@@ -47,12 +47,12 @@ function Login() {
 						</div>
 						<div class="u-margin-bottom-small"></div>
 						<div class="login-btns">
-							<a href="" class="btn-3 btn-primary btn-md">
+							<Link to="/" class="btn-3 btn-primary btn-md">
 								Login
-							</a>
-							<a href="" class="btn btn-link btn-sm">
+							</Link>
+							<Link to="/" class="btn btn-link btn-sm">
 								Forgot password?
-							</a>
+							</Link>
 						</div>
 					</form>
 				</div>

@@ -5,7 +5,7 @@ import CartCard from '../Components/CartCard';
 import { useCart } from '../Context/cart-context';
 import CartPriceCard from '../Components/CartPriceCard';
 function CartPage() {
-	const { state, dispatch } = useCart();
+	const { state } = useCart();
 	const cartProds = state.cartProducts;
 
 	return (
