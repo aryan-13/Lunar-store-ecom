@@ -2,6 +2,7 @@ import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import { useWishlist } from '../Context/wishlist-context';
 import ProductCard from '../Components/ProductCard';
+import EmptyCart from '../Components/CartComponents/EmptyCart';
 
 function WishlistPage() {
 	const { wishlist } = useWishlist();
@@ -22,7 +23,7 @@ function WishlistPage() {
 							);
 						})
 					) : (
-						<h1>Wishlist is empty</h1>
+						<EmptyCart text="Your wishlist is empty" />
 					)}
 				</section>
 			</div>
