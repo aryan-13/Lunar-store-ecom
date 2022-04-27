@@ -10,8 +10,6 @@ const cart = {
 };
 const CartProvider = ({ children }) => {
 	const addtocart = (state, product) => {
-		console.log(state.cartProducts, product);
-
 		const updatedProduct = {
 			...product,
 			inCartQuantity: 1,
@@ -75,7 +73,6 @@ const CartProvider = ({ children }) => {
 				}
 				return item;
 			});
-			console.log('DECREASING Q:', product.inCartQuantity);
 			return {
 				...state,
 				price: state.price - product.price,

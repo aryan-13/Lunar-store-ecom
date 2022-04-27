@@ -30,7 +30,6 @@ function ProductCard({ product, page }) {
 							<button
 								onClick={() => {
 									dispatch({ type: 'ADD_TO_CART', payload: product });
-									console.log(product.inCartQuantity);
 								}}
 								className="btn btn-primary btn-sm"
 							>
