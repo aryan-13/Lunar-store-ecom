@@ -1,10 +1,11 @@
-import React from 'react';
-import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
-import CartCard from '../Components/CartCard';
+import {
+	CartCard,
+	Footer,
+	Navbar,
+	CartPriceCard,
+	EmptyCart,
+} from '../Components/index';
 import { useCart } from '../Context/cart-context';
-import CartPriceCard from '../Components/CartPriceCard';
-import EmptyCart from '../Components/CartComponents/EmptyCart';
 function CartPage() {
 	const { state } = useCart();
 	const cartProds = state.cartProducts;

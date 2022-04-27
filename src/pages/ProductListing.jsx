@@ -1,9 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
-import Navbar from '../Components/Navbar';
 import axios from 'axios';
-import FilterBar from '../Components/FilterBar';
-import ProductCard from '../Components/ProductCard';
+import { Navbar, FilterBar, ProductCard } from '../Components/index';
 import {
 	useFilter,
 	sortByPrice,
