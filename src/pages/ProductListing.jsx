@@ -15,7 +15,6 @@ function ProductListing() {
 	const getData = async () => {
 		const data = await axios.get('/api/products');
 		try {
-			console.log(data.data.products);
 			setProducts(data.data.products);
 		} catch {
 			console.log('error');
@@ -28,13 +27,10 @@ function ProductListing() {
 
 	let modifiedProducts =
 		filter.sortBy === '' ? products : sortByPrice(products, filter.sortBy);
-	console.log('modifiedPro', modifiedProducts);
 	let filteredByCategory =
 		filter.categories.length === 0
 			? modifiedProducts
 			: filterByCategory(modifiedProducts, filter.categories);
-	console.log('filter Category: ', filter.categories);
-	console.log('MP:', filteredByCategory);
 	let filteredByRating = filterByRating(filteredByCategory, filter.rating);
 	return (
 		<div className="home-container flex-col">

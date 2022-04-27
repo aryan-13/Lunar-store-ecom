@@ -18,12 +18,7 @@ const sortByPrice = (productList, sortBy) => {
 };
 
 const filterByCategory = (productList, filterCategories) => {
-	console.log(
-		`productList: ${productList}, filterCategories: ${filterCategories}`
-	);
 	return productList.filter((item) => {
-		console.log('item:', item.category);
-		console.log(filterCategories.includes(item.category));
 		return filterCategories.includes(item.category);
 	});
 };

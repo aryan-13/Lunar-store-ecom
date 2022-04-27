@@ -15,8 +15,7 @@ function CartPage() {
 
 			<section className="cart">
 				<h3 className="cart-heading heading-4 bold-2 centered">
-					{' '}
-					CART <i className="color-primary-dark fa fa-shopping-cart"></i>{' '}
+					CART <i className="color-primary-dark fa fa-shopping-cart"></i>
 				</h3>
 				<div className="u-margin-bottom-medium"></div>
 				<div className="u-margin-bottom-small"></div>

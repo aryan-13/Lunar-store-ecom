@@ -8,7 +8,6 @@ function FilterBar() {
 		const categories = await axios.get('/api/categories');
 
 		try {
-			console.log('catogs: ', categories.data.categories);
 			setCategories(categories.data.categories);
 		} catch (err) {
 			console.log(err);
