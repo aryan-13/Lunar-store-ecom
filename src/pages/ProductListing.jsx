@@ -37,16 +37,23 @@ function ProductListing() {
 			<Navbar />
 			<div class="flex-row prod-filter-container">
 				<FilterBar />
-				<div className="flex-row product-section ">
-					{filteredByRating.map((product) => {
-						return (
-							<ProductCard
-								product={product}
-								key={product.id}
-								page={'productListing'}
-							/>
-						);
-					})}
+				<div className="flex-col product-section ">
+					<div className="heading-5 bold-1">
+						Showing{' '}
+						<span className="color-primary">{filteredByRating.length}</span> of{' '}
+						{products.length} Products
+					</div>
+					<div className="flex-row product-section">
+						{filteredByRating.map((product) => {
+							return (
+								<ProductCard
+									product={product}
+									key={product.id}
+									page={'productListing'}
+								/>
+							);
+						})}
+					</div>
 				</div>
 			</div>
 		</div>

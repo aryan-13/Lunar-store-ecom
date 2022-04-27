@@ -18,10 +18,15 @@ function ProductCard({ product, page }) {
 					<img src={product.image} alt="" />
 				</div>
 				<div className="card-text">
-					<h3 className="card-title">{product.name}</h3>
+					<h3 className="card-title ">{product.name}</h3>
+					<span className="bold-3">{product.rating}⭐</span>
+
 					<div className="card-price">
-						{product.discountPrice}{' '}
-						<span className="card-price-striked">{product.price}</span>
+						₹ {product.discountPrice}{' '}
+						<span className="card-price-striked">₹ {product.price}</span>
+						<span className="card-price-percent bold-2">
+							{product.discountPercentage}
+						</span>
 					</div>
 				</div>
 				<div className="card-btn">

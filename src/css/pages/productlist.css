@@ -1,3 +1,15 @@
 .prod-filter-container {
 	position: relative;
 }
+.vertical-card {
+	box-shadow: none;
+	transition: all 0.2s;
+}
+.vertical-card:hover {
+	transform: scale(1.05);
+}
+.card-title {
+	min-height: 5rem;
+	overflow: hidden;
+	margin: 0;
+}
