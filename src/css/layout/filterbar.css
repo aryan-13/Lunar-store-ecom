@@ -1,7 +1,7 @@
 .filter-bar {
 	display: flex;
 	flex-direction: column;
-	background-color: var(--color-grey-light-2);
+	/* background-color: var(--color-grey-light-1); */
 	padding: var(--size-1);
 	min-width: 19rem;
 	padding-top: var(--size-2);

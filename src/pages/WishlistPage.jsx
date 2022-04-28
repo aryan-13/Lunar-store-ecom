@@ -1,9 +1,6 @@
 import Navbar from '../Components/Navbar';
-import Footer from '../Components/Footer';
 import { useWishlist } from '../Context/wishlist-context';
-import ProductCard from '../Components/ProductCard';
-import EmptyCart from '../Components/CartComponents/EmptyCart';
-
+import { Footer, ProductCard, EmptyCart } from '../Components/index';
 function WishlistPage() {
 	const { wishlist } = useWishlist();
 	return (
